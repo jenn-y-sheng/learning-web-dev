@@ -1,0 +1,24 @@
+div {
+  border: none;
+  background-color: rgb(59, 59, 59);
+  width: 460px;
+  padding: 25px 20px;
+}
+
+p {
+  font-family: Arial;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.title {
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.description {
+  color: rgb(168, 168, 168);
+  font-size: 20px;
+}
