@@ -1,0 +1,65 @@
+.friend-card {
+  width: 200px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  margin: 20px 10px;
+}
+
+.friend-pfp {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.mutual-pfp {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 15px;
+  vertical-align: middle;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 10px;
+  font-family: Arial;
+}
+
+.name {
+  font-weight: bold;
+  margin-top: 8px;
+  margin-bottom: 6px;
+}
+
+.mutuals {
+  color: gray;
+  font-size: 14px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+button {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(77, 105, 247);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.mutuals-section {
+  display: grid;
+  grid-template-columns: 35px 1fr;
+  align-items: center;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+/* make the items in a row be centered: align-items: center */
+
+.grid {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  column-gap: 20px;
+}
