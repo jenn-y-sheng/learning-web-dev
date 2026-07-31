@@ -1,1 +1,1 @@
-Final YouTube clone is in finalYoutubeClone/youtube.html
+Final YouTube clone is in finalYoutubeCopy/youtube.html
