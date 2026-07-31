@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>14e</title>
+  <style>
+    body {
+      background-color: aliceblue;
+    }
+
+    div {
+      font-family: Arial;
+      font-weight: bold;
+    }
+
+    .header {
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 70px;
+      background-color: white;
+      justify-content: space-between;
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      margin-left: 100px;
+      column-gap: 10px;
+    }
+
+    img {
+      height: 50px;
+      width: 50px;
+      object-fit: cover;
+      border-radius: 25px;
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      margin-right: 70px;
+      column-gap: 7px;
+    }
+
+    button {
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      width: 100px;
+      font-size: 13px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .add-friend {
+      background-color: blue;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="left">
+      <img src="../lesson9/jingyuan.jpg" alt="">
+      <div class="name">Jing Yuan</div>
+    </div>
+    <div class="right">
+      <button class="add-friend">Add Friend</button>
+      <button class="message">Message</button>
+    </div>
+  </div>
+</body>
+</html>
