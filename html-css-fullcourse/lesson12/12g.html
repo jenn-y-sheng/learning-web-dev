@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>12g</title>
+    <style>
+      p {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: Arial;
+      }
+      .container {
+        display: grid;
+        row-gap: 20px;
+        width: 500px;
+      }
+
+      .user-info {
+        display: grid;
+        row-gap: 4px;
+        flex: 1;
+      }
+
+      .name {
+        font-weight: bold;
+      }
+
+      .description, .status {
+        color: gray;
+      }
+
+      .status {
+        font-size: 14px;
+      }
+
+      .flex-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 30px;
+        margin-right: 20px;
+      }
+
+      button {
+        background-color: blue;
+        color: white;
+        border: none;
+        padding: 7px 10px;
+        border-radius: 4px;
+        font-size: 16px;
+        margin-left: 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="flex-box">
+        <img src="../lesson9/jingyuan.jpg" alt="">
+        <div class="user-info">
+          <p class="name">Jing Yuan</p>
+          <p class="description">the honkai star rail 5 star erudition lightning character</p>
+          <p class="status">Popular</p>
+        </div>
+        <button>Follow</button>
+      </div>
+
+      <div class="flex-box">
+        <img src="../lesson9/jingyuan2.jpg" alt="">
+        <div class="user-info">
+          <p class="name">Yuan Jing</p>
+          <p class="description">omg white day</p>
+          <p class="status">Popular</p>
+        </div>
+        <button>Follow</button>
+      </div>
+      
+      <div class="flex-box">
+        <img src="../lesson9/jingyuan3.png" alt="">
+        <div class="user-info">
+          <p class="name">Ying Juan</p>
+          <p class="description">a pose</p>
+          <p class="status">Popular</p>
+        </div>
+        <button>Follow</button>
+      </div>
+    </div>
+  </body>
+</html>

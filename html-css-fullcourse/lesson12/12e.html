@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>12e</title>
+  <style>
+    p {
+      font-family: Arial;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .grid {
+      display: grid;
+      border: 1px solid gray;
+      border-radius: 5px;
+      width: 380px;
+      padding: 5px 10px;
+      row-gap: 10px;
+    }
+    
+    .flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .notifications {
+      background-color: blue;
+      color: white;
+      border: none;
+      font-family: Arial;
+      font-weight: bold;
+      padding: 4px 12px;
+      border-radius: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <div class="flex">
+      <div class="label">
+        <p>Home</p>
+      </div>
+      <div class="notifications">
+        14
+      </div>
+    </div>
+    <div class="flex">
+      <div class="label">
+        <p>Notifications</p>
+      </div>
+      <div class="notifications">3</div>
+    </div>
+    <div class="flex">
+      <div class="label">
+        <p>Messages</p>
+      </div>
+      <div class="notifications">5</div>
+    </div>
+  </div>
+</body>
+</html>

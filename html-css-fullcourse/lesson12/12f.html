@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>12f</title>
+  <style>
+    div {
+      font-family: Arial;
+    }
+
+    .flexbox {
+      display: flex;
+      color: white;
+      background-color: purple;
+      height: 50px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 15px;
+      gap: 20px;
+    }
+    /* make a mandatory gap between items if too close */
+
+    .left-section {
+      font-weight: bold;
+    }
+
+    input {
+      width: 500px;
+      padding: 5px 15px;
+      border: none;
+      border-radius: 20px;
+    }
+
+    button {
+      border: 1px white solid;
+      background-color: purple;
+      color: white;
+      padding: 7px 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="flexbox">
+    <div class="left-section">
+      Home
+    </div>
+    <input type="text" placeholder="Search">
+    <button>Download</button>
+  </div>
+</body>
+</html>
