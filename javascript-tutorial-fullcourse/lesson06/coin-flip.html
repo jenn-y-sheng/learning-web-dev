@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Coin Flip</title>
+</head>
+<body>
+  <script>
+    const num = Math.random();
+
+    let result = '';
+    (num < 0.5) ? result = 'heads' : result = 'tails';
+
+    const guess = 'heads';
+    (guess === result) ? console.log('You win!') : console.log('You lose.');
+  </script>
+</body>
+</html>
