@@ -20,6 +20,60 @@
   grid-template-columns: 48px 1fr;
 }
 
+.profile-picture-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-picture-container .tooltip {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  position: absolute;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  top: 40px;
+  white-space: nowrap;
+  padding: 15px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+}
+
+.profile-picture-container:hover .tooltip {
+  opacity: 1;
+}
+
+.channel-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 5px;
+}
+
+.channel-info div {
+  font-family: Roboto, Arial;
+}
+
+.channel-name {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.subscribers {
+  font-size: 14px;
+  color: gray;
+}
+
+.profile-picture-container .tooltip img {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
 .profile-picture {
   width: 36px;
   border-radius: 36px;
