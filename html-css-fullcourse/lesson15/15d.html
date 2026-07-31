@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      body {
+        height: 3000px;
+      }
+
+      .box {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        height: 180px;
+        width: 320px;
+        background-color: gray;
+      }
+
+      .close {
+        position: absolute;
+        background-color: black;
+        color: white;
+        top: -17px;
+        left: -17px;
+        padding: 10px 14px;
+        border-radius: 20px;
+        font-family: Arial;
+        cursor: pointer;
+      }
+
+      .time {
+        background-color: black;
+        color: white;
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        font-family: Arial;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="close">X</div>
+      <div class="time">0:29</div>
+    </div>
+  </body>
+</html>
