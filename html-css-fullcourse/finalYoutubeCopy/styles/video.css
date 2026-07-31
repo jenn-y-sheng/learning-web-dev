@@ -53,10 +53,6 @@
   row-gap: 5px;
 }
 
-.channel-info div {
-  font-family: Roboto, Arial;
-}
-
 .channel-name {
   font-weight: bold;
   font-size: 15px;
@@ -100,9 +96,43 @@
   column-gap: 16px;
   row-gap: 44px;
 }
+/* inheritance mainly works with text properties
+   try text deco */
+
+@media (max-width: 870px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 871px) and (min-width: 1124px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1125px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .video-title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .video-author {
+    font-size: 14px;
+  }
+
+  .video-stats {
+    font-size: 14px;
+  }
+}
 
 .video-time {
-  font-family: Roboto, Arial;
   font-size: 12px;
   font-weight: 500;
   padding: 4px;
