@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tweet</title>
+    <style>
+      div {
+        font-family: Arial;
+      }
+      .tweet-container {
+        display: flex;
+        width: 420px;
+        padding: 10px 15px;
+      }
+
+      img {
+        height: 50px;
+        width: 50px;
+        object-fit: cover;
+        border-radius: 25px;
+        margin-right: 10px;
+      }
+
+      .tweet-column {
+        flex: 1;
+      }
+
+      .user-info {
+        display: flex;
+        margin-bottom: 5px;
+      }
+
+      .display-name {
+        font-weight: bold;
+        margin-right: 5px;
+      }
+
+      .username {
+        color: gray;
+      }
+
+      .message {
+        line-height: 20px;
+        margin-bottom: 8px;
+      }
+
+      .video-box {
+        display: flex;
+        border: 1px rgb(181, 181, 181) solid;
+        border-radius: 15px;
+        overflow: hidden;
+      }
+      
+      .gray {
+        background-color: rgb(181, 181, 181);
+        width: 160px;
+      }
+
+      .video-info {
+        padding: 15px 15px;
+        align-items: center;
+      }
+
+      .link {
+        color: gray;
+        margin-bottom: 3px;
+      }
+
+      .title {
+        line-height: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tweet-container">
+      <div>
+        <img src="../lesson9/jingyuan.jpg" alt="">
+      </div>
+      <div class="tweet-column">
+        <div class="user-info">
+          <div class="display-name">supersimple.dev</div>
+          <div class="username">@SuperSimpleDev</div>
+        </div>
+        <div class="message">What is backend web development? A complete overview. New video is up!</div>
+        <div class="video-box">
+          <div class="gray"></div>
+          <div class="video-info">
+            <div class="link">youtube.com</div>
+            <div class="title">Backend web development - a complete overview (2021)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
