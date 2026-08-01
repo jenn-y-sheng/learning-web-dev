@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>7h</title>
+  </head>
+  <body>
+    <script>
+      function convertLength(length, from, to) {
+        if (from === to) {
+          return `${length} ${from}`;
+        } else if (from === 'km') {
+          if (to === 'miles') {
+            return `${length / 1.6} miles`;
+          } else if (to === 'ft') {
+            return `${length * 3281} feet`;
+          }
+        } else if (from === 'miles') {
+          if (to === 'km') {
+            return `${length * 1.6} km`;
+          } else if (to === 'ft') {
+            return `${length * 5280} feet`;
+          }
+        } else if (from === 'ft') {
+          if (to === 'miles') {
+            return `${length / 5280} miles`;
+          } else if (to === 'km') {
+            return `${length / 3281} km`;
+          }
+        }
+      }
+
+      console.log(convertLength(5, 'miles', 'km'));
+      console.log(convertLength(5, 'miles', 'ft'));
+      console.log(convertLength(5, 'km', 'ft'));
+    </script>
+  </body>
+</html>

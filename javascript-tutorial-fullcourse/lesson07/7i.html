@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>7i</title>
+  </head>
+  <body>
+    <script>
+      function checkInvalid(unit) {
+        if (unit !== 'miles' && unit !== 'km' && unit !== 'ft') {
+          return `Invalid unit: ${unit}`;
+        }
+      }
+
+      function convertLength(length, from, to) {
+        const fromCheck = checkInvalid(from);
+        if (fromCheck) {
+          return fromCheck;
+        }
+
+        const toCheck = checkInvalid(to);
+        if (toCheck) {
+          return toCheck;
+        }
+
+        if (from === to) {
+          return `${length} ${from}`;
+        } else if (from === 'km') {
+          if (to === 'miles') {
+            return `${length / 1.6} miles`;
+          } else if (to === 'ft') {
+            return `${length * 3281} feet`;
+          }
+        } else if (from === 'miles') {
+          if (to === 'km') {
+            return `${length * 1.6} km`;
+          } else if (to === 'ft') {
+            return `${length * 5280} feet`;
+          }
+        } else if (from === 'ft') {
+          if (to === 'miles') {
+            return `${length / 5280} miles`;
+          } else if (to === 'km') {
+            return `${length / 3281} km`;
+          }
+        }
+      }
+
+      console.log(convertLength(5, 'lbs', 'ft'));
+      console.log(convertLength(5, 'ft', 'lbs'));
+    </script>
+  </body>
+</html>
