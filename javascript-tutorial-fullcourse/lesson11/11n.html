@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>11n</title>
+  </head>
+  <body>
+    <script>
+      // can't do result.word, makes a property called word instead
+      function countWords(words) {
+        const result = {};
+        for (let i = 0; i < words.length; i++) {
+          const word = words[i];
+          if (!result[word]) {
+            result[word] = 1;
+          } else {
+            result[word]++;
+          }
+        }
+        return result;
+      }
+
+      console.log(countWords(['apple', 'grape', 'apple', 'apple']));
+    </script>
+  </body>
+</html>

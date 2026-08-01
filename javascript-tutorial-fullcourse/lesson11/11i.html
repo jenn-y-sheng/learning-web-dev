@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>11i</title>
+  </head>
+  <body>
+    <script>
+      function addOne(array, num) {
+        const newArray = [];
+        for (let i = 0; i < array.length; i++) {
+          newArray.push(array[i] + num);
+        }
+        return newArray;
+      }
+
+      console.log(addOne([1, 2, 3], 2));
+      console.log(addOne([1, 2, 3], 3));
+      console.log(addOne([-2, -1, 0, 99], 2));
+    </script>
+  </body>
+</html>
