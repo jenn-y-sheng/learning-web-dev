@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>11w</title>
+  </head>
+  <body>
+    <script>
+      function findIndex(array, word) {
+        let found = -1;
+        for (let i = 0; i < array.length; i++) {
+          if (array[i] === word) {
+            found = i;
+            break;
+          }
+        }
+        return found;
+      }
+
+      function unique(array) {
+        const result = [];
+        for (let i = 0; i < array.length; i++) {
+          const word = array[i];
+          if (findIndex(array, word) === i) {
+            result.push(word);
+          }
+          // answer key
+          // if (findIndex(result, word) === -1) {
+          //   result.push(word);
+          // }
+        }
+        return result;
+      }
+
+      console.log(unique(['green', 'red', 'blue', 'red']));
+      console.log(unique(['red', 'green', 'green', 'red']));
+    </script>
+    </script>
+  </body>
+</html>

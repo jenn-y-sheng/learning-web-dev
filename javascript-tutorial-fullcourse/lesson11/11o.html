@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>11o</title>
+  </head>
+  <body>
+    <script>
+      const myArray = ['hello', 'world', 'search', 'good'];
+      //const myArray = ['hello', 'world'];
+      let found = -1;
+      for (let i = 0; i < myArray.length; i++) {
+        if (myArray[i] === 'search') {
+          found = i;
+          break;
+        }
+      }
+      console.log(found);
+    </script>
+  </body>
+</html>
