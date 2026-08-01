@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <p class="js-calculation"></p>
+    <p>
+      <button onclick="
+        updateCalculation('1');
+      ">1</button>
+
+      <button onclick="
+        updateCalculation('2');
+      ">2</button>
+
+      <button onclick="
+        updateCalculation('3');
+      ">3</button>
+
+      <button onclick="
+        updateCalculation(' + ');
+      ">+</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('4');
+      ">4</button>
+
+      <button onclick="
+        updateCalculation('5');
+      ">5</button>
+
+      <button onclick="
+        updateCalculation('6');
+      ">6</button>
+      <button onclick="
+        updateCalculation(' - ');
+      ">-</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('7');
+      ">7</button>
+
+      <button onclick="
+        updateCalculation('8');
+      ">8</button>
+
+      <button onclick="
+        updateCalculation('9');
+      ">9</button>
+
+      <button onclick="
+        updateCalculation(' * ');
+      ">*</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('0');
+      ">0</button>
+
+      <button onclick="
+        updateCalculation('.');
+      ">.</button>
+
+      <button onclick="
+        updateCalculation('=');
+      ">=</button>
+
+      <button onclick="
+        updateCalculation(' / ');
+      ">/</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('clear');
+      ">Clear</button>
+    </p>
+
+    <script>
+      let calculation = localStorage.getItem('calc') || '';
+      document.querySelector('.js-calculation').innerHTML = calculation;
+
+      function updateCalculation(el) {
+        let message = '';
+        if (el === 'clear') {
+          calculation = '';
+          message = 'Cleared.'
+        } else if (el === '=') {
+          calculation = eval(calculation);
+          message = calculation;
+        } else {
+          calculation += el;
+          message = calculation;
+        }
+        localStorage.setItem('calc', calculation);
+        console.log(message);
+        document.querySelector('.js-calculation').innerHTML = calculation;
+      }
+    </script>
+  </body>
+</html>

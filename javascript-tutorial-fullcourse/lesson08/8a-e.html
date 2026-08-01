@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>8a-e</title>
+  </head>
+  <body>
+    <script>
+      function comparePrice(product1, product2) {
+        if (product1.price < product2.price) {
+          return product1;
+        }
+        return product2;
+      }
+
+      function isSameProduct(product1, product2) {
+        if (product1.price === product2.price && product1.name === product2.name) {
+          return true;
+        }
+        return false;
+      }
+
+      product = {
+        name: 'basketball',
+        price: 2095
+      };
+      console.log(product);
+
+      product.price += 500;
+      console.log(product);
+
+      product['delivery-time'] = '3 days';
+      console.log(product);
+
+      product1 = {
+        name: 'shirt',
+        price: 1111
+      };
+      product2 = {
+        name: 'shoes',
+        price: 2222
+      };
+      console.log(comparePrice(product1, product2));
+
+      console.log(isSameProduct(product1, product2));
+      product3 = {
+        name: 'shoes',
+        price: 2222
+      };
+      console.log(isSameProduct(product3, product2));
+    </script>
+  </body>
+</html>

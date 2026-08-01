@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>9h</title>
+  </head>
+  <body>
+    <input type="text" onkeyup="
+      updateText();
+    ">
+    <p></p>
+
+    <script>
+      function updateText() {
+        let para = document.querySelector('p');
+        let input = document.querySelector('input');
+        para.innerHTML = input.value;
+      }
+    </script>
+  </body>
+</html>

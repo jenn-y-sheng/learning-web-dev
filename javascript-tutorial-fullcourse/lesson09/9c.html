@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>9c</title>
+</head>
+<body>
+  <button onclick="
+    updateDisplay('heads');
+  ">heads</button>
+
+  <button onclick="
+    updateDisplay('tails');
+  ">tails</button>
+
+  <p></p>
+
+  <script>
+    function updateDisplay(choice) {
+      document.querySelector('p').innerHTML = `You chose: ${choice}`;
+    }
+  </script>
+</body>
+</html>
