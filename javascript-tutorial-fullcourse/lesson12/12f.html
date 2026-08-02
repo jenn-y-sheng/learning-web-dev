@@ -11,12 +11,16 @@
     <p></p>
 
     <script>
+      document.querySelector('button').addEventListener('click', () => {
+        addToCart();
+      });
+
       let timeoutId;
 
       function addToCart(){
         document.querySelector('p').innerHTML = 'Added';
         clearTimeout(timeoutId);
-        timeoutId = setInterval(function() {
+        timeoutId = setInterval(() => {
           document.querySelector('p').innerHTML = '';
         }, 2000);
       }

@@ -4,16 +4,18 @@
     <title>12e</title>
   </head>
   <body>
-    <button onclick="
-      addToCart();
-    ">Add to cart</button>
+    <button>Add to cart</button>
 
     <p></p>
 
     <script>
+      document.querySelector('button').addEventListener('click', () => {
+        addToCart();
+      });
+
       function addToCart(){
         document.querySelector('p').innerHTML = 'Added';
-        setInterval(function() {
+        setInterval(() => {
           document.querySelector('p').innerHTML = '';
         }, 2000);
       }

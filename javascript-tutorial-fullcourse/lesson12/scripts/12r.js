@@ -27,15 +27,18 @@ let intervalId;
 
 // };
 function autoPlay() {
+  const buttonElement = document.querySelector('.js-auto-play-button');
   if (!isAutoPlaying) {
     intervalId = setInterval(() => {
       const playerMove = pickComputerMove();
       playGame(playerMove);
     }, 1000);
     isAutoPlaying = true;
+    buttonElement.innerHTML = 'Stop Playing';
   } else {
     clearInterval(intervalId);
     isAutoPlaying = false;
+    buttonElement.innerHTML = 'Auto Play';
   }
 }
 
@@ -54,6 +57,16 @@ document.querySelector('.js-scissors-button')
     playGame('scissors');
   });
 
+document.querySelector('.js-auto-play-button')
+  .addEventListener('click', () => {
+    autoPlay();
+  });
+
+document.querySelector('.js-reset-score-button')
+  .addEventListener('click', () => {
+    showConfirmationMessage();
+  });
+
 document.body.addEventListener('keydown', (event) => {
   if (event.key === 'r') {
     playGame('rock');
@@ -61,8 +74,47 @@ document.body.addEventListener('keydown', (event) => {
     playGame('paper');
   } else if (event.key === 's') {
     playGame('scissors');
+  } else if (event.key === 'a') {
+    autoPlay();
+  } else if (event.key === 'Backspace') {
+    showConfirmationMessage();
   }
 });
+
+function showConfirmationMessage() {
+  document.querySelector('.js-confirmation-message')
+    .innerHTML = `
+      Are you sure you want to reset the score?
+      <button class="reset-confirm-button js-reset-confirm-button-yes">Yes</button>
+      <button class="reset-confirm-button js-reset-confirm-button-no">No</button>
+  `;
+
+  document.querySelector('.js-reset-confirm-button-yes')
+    .addEventListener('click', () => {
+      resetScore();
+      hideConfirmationMessage();
+  });
+
+  document.querySelector('.js-reset-confirm-button-no')
+    .addEventListener('click', () => {
+      hideConfirmationMessage();
+  });
+}
+
+function hideConfirmationMessage() {
+  document.querySelector('.js-confirmation-message')
+    .innerHTML = '';
+}
+
+function resetScore() {
+  score.wins = 0;
+  score.losses = 0;
+  score.ties = 0;
+  localStorage.removeItem('score');
+  updateScoreElement();
+}
+
+
 
 function playGame(playerMove) {
   const computerMove = pickComputerMove();

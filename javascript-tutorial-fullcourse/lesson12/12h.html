@@ -4,25 +4,21 @@
     <title>App</title>
   </head>
   <body>
-    <button onclick="
-      addMessage();
-    ">Add</button>
+    <button class="js-add-button">Add</button>
 
-    <button onclick="
-      removeMessage();
-    ">Remove</button>
+    <button class="js-remove-button">Remove</button>
     <script>
       let messages = 2;
 
-      function addMessage() {
+      document.querySelector('.js-add-button').addEventListener('click', () => {
         messages++;
-      }
+      })
 
-      function removeMessage() {
+      document.querySelector('.js-remove-button').addEventListener('click', () => {
         messages--;
-      }
-
-      setInterval(function() {
+      })
+  
+      setInterval(() => {
         if (document.title === `(${messages}) New messages`) {
           document.title = 'App';
         } else {
