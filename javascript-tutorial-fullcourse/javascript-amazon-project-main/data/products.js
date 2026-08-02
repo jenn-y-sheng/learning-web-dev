@@ -656,5 +656,35 @@ const products = [
       "apparel",
       "mens"
     ]
-  }
+  },
+  {
+    id: "id1",
+    image: "images/products/backpack.jpg",
+    name: "Black Athletic Backpack",
+    rating: {
+      stars: 1.0,
+      count: 1
+    },
+    priceCents: 99999
+  },
+  {
+    id: "id2",
+    image: "images/products/umbrella.jpg",
+    name: "Anti-Wind Umbrella",
+    rating: {
+      stars: 4.5,
+      count: 482
+    },
+    priceCents: 2000
+  },
+  {
+    id: "id3",
+    image: "images/products/jing-yuan-acrylic-stand.jpg",
+    name: "HOYOVERSE Honkai: Star Rail Character Portrait Series Stand - Jing Yuan (Erudition)",
+    rating: {
+      stars: 5.0,
+      count: 838438
+    },
+    priceCents: 1499
+  },
 ];
