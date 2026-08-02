@@ -126,6 +126,8 @@ document.querySelectorAll('.js-update-quantity-link')
   .forEach((updateLink) => {
     updateLink.addEventListener('click', () => {
       const productId = updateLink.dataset.productId;
-      console.log(productId);
+
+      const cartItemContainer = document.querySelector(`.js-cart-item-container-${productId}`);
+      cartItemContainer.classList.add('is-editing-quantity');
     });
   })
