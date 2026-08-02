@@ -125,5 +125,10 @@ document.querySelectorAll('.js-update-quantity-link')
     updateLink.addEventListener('click', () => {
       const productId = updateLink.dataset.productId;
       console.log(productId);
+
+      updateLink.innerHTML += `
+        <input class="quantity-input">
+        <span class="save-quantity-link link-primary">Save</span>
+      `;
     });
   })
