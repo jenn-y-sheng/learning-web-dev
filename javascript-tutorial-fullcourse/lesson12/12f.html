@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>12f</title>
+  </head>
+  <body>
+    <button onclick="
+      addToCart();
+    ">Add to cart</button>
+
+    <p></p>
+
+    <script>
+      let timeoutId;
+
+      function addToCart(){
+        document.querySelector('p').innerHTML = 'Added';
+        clearTimeout(timeoutId);
+        timeoutId = setInterval(function() {
+          document.querySelector('p').innerHTML = '';
+        }, 2000);
+      }
+    </script>
+  </body>
+</html>
