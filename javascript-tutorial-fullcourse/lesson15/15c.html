@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>15c</title>
+  </head>
+  <body>
+    <script type = "module">
+      import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
+
+      const today = dayjs();
+      const fiveDaysAfter = today.subtract(1, 'month');
+      console.log(fiveDaysAfter.format('MMMM D'));
+    </script>
+  </body>
+</html>

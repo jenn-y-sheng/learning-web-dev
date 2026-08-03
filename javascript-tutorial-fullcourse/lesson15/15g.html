@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>15g</title>
+  </head>
+  <body>
+    <script type = "module">
+      import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
+      import isSatSun from './15f.js';
+
+      console.log(isSatSun(dayjs()));
+      console.log(isSatSun(dayjs().add(1, 'day')));
+    </script>
+  </body>
+</html>
