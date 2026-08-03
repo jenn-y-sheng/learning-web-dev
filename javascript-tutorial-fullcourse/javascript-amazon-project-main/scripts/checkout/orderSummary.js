@@ -7,7 +7,6 @@ import { renderPaymentSummary } from './paymentSummary.js';
 import { renderCheckoutHeader } from './checkoutHeader.js';
 
 export function renderOrderSummary() {
-  //updateCartQuantity();
   renderCheckoutHeader();
 
   let cartSummaryHTML = '';
@@ -113,18 +112,11 @@ export function renderOrderSummary() {
 
         renderOrderSummary();
 
-        //updateCartQuantity();
-
         renderPaymentSummary();
 
         renderCheckoutHeader();
       });
     });
-
-  // function updateCartQuantity() {
-  //   document.querySelector('.js-return-to-home-link')
-  //     .innerHTML = `${calculateCartQuantity()} items`;
-  // }
 
   document.querySelectorAll('.js-update-quantity-link')
     .forEach((updateLink) => {
@@ -154,13 +146,11 @@ export function renderOrderSummary() {
         const cartItemContainer = document.querySelector(`.js-cart-item-container-${productId}`);
         cartItemContainer.classList.remove('is-editing-quantity');
 
-        const quantityLabel = document.querySelector(`.js-quantity-label-${productId}`);
-        quantityLabel.innerHTML = newQuantity;
-
-        //updateCartQuantity();
         renderCheckoutHeader();
 
         renderPaymentSummary();
+
+        renderOrderSummary();
       })
     });
 
