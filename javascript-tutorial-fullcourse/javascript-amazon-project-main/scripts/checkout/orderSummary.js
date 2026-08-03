@@ -8,7 +8,8 @@ import { renderPaymentSummary } from './paymentSummary.js';
 import { renderCheckoutHeader } from './checkoutHeader.js';
 
 export function renderOrderSummary() {
-  updateCartQuantity();
+  //updateCartQuantity();
+  renderCheckoutHeader();
 
   let cartSummaryHTML = '';
 
@@ -127,7 +128,7 @@ export function renderOrderSummary() {
 
         renderOrderSummary();
 
-        updateCartQuantity();
+        //updateCartQuantity();
 
         renderPaymentSummary();
 
@@ -135,10 +136,10 @@ export function renderOrderSummary() {
       });
     });
 
-  function updateCartQuantity() {
-    document.querySelector('.js-return-to-home-link')
-      .innerHTML = `${calculateCartQuantity()} items`;
-  }
+  // function updateCartQuantity() {
+  //   document.querySelector('.js-return-to-home-link')
+  //     .innerHTML = `${calculateCartQuantity()} items`;
+  // }
 
   document.querySelectorAll('.js-update-quantity-link')
     .forEach((updateLink) => {
@@ -171,7 +172,8 @@ export function renderOrderSummary() {
         const quantityLabel = document.querySelector(`.js-quantity-label-${productId}`);
         quantityLabel.innerHTML = newQuantity;
 
-        updateCartQuantity();
+        //updateCartQuantity();
+        renderCheckoutHeader();
 
         renderPaymentSummary();
       })
