@@ -89,7 +89,11 @@ document.querySelectorAll('.js-add-to-cart-button')
 
       addedMessageTimeoutId = timeoutId;
 
-      addToCart(productId, button);
+      const quantitySelector = document.querySelector(`.js-quantity-selector-${button.dataset.productId}`);
+
+      const quantity = Number(quantitySelector.value);
+
+      addToCart(productId, quantity);
 
       updateCartQuantity();
     });
