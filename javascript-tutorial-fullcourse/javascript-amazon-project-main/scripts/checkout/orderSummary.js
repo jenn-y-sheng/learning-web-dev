@@ -169,6 +169,8 @@ export function renderOrderSummary() {
         quantityLabel.innerHTML = newQuantity;
 
         updateCartQuantity();
+
+        renderPaymentSummary();
       })
     });
 
@@ -181,6 +183,8 @@ export function renderOrderSummary() {
           if (saveLink) {
             saveLink.click();
           }
+
+          renderPaymentSummary();
         }
       });
     });
