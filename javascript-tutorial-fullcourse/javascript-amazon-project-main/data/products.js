@@ -121,7 +121,7 @@ export function loadProducts(fun) {
       if (productDetails.type === 'clothing') {
         return new Clothing(productDetails);
       }
-      if (productDetails.type === 'appliance') {
+      if (productDetails.keywords.includes('appliances')) {
         return new Appliance(productDetails);
       }
 
