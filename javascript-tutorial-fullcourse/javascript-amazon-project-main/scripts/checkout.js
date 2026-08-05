@@ -11,16 +11,10 @@ async function loadPage() {
   try {
     // throw 'error1';
 
-    await loadProductsFetch();
-
-    // const value = await new Promise((resolve, reject) => {
-    //   // throw 'error2';
-    //   loadCart(() => {
-    //     //reject('error3');
-    //     resolve('value3');
-    //   });
-    // });
-    await loadCartFetch();
+    await Promise.all([
+      loadProductsFetch(),
+      loadCartFetch()
+    ]);
 
   } catch (error) {
     console.log('unexpected error. Please try again later.');
